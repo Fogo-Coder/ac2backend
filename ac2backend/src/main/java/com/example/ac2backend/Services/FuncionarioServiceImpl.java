@@ -17,14 +17,16 @@ import com.example.ac2backend.dtos.FuncionarioRequestDTO;
 import com.example.ac2backend.dtos.RegraNegocioException;
 import com.example.ac2backend.dtos.SetorDTO;
 
-@Service 
 
-public class FuncionarioServiceImp implements FuncionarioService {
+
+@Service
+public class FuncionarioServiceImpl implements FuncionarioService {
+
     private FuncionarioRepository funcionarioRepository;
     private ProjetoRepository projetoRepository;
     private SetorRepository setorRepository;
 
-    public FuncionarioServiceImp(FuncionarioRepository funcionarioRepository, ProjetoRepository projetoRepository,
+    public FuncionarioServiceImpl(FuncionarioRepository funcionarioRepository, ProjetoRepository projetoRepository,
             SetorRepository setorRepository) {
         this.funcionarioRepository = funcionarioRepository;
         this.projetoRepository = projetoRepository;
