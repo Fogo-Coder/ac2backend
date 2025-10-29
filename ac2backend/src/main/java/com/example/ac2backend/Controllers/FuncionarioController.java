@@ -7,13 +7,15 @@ import com.example.ac2backend.Services.FuncionarioService;
 import com.example.ac2backend.dtos.FuncionarioDTO;
 import com.example.ac2backend.dtos.FuncionarioRequestDTO;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
-@RequestMapping("/funcionarios")
+@RequestMapping("/funcionarios") 
+@CrossOrigin(origins = "*")
 public class FuncionarioController {
     private FuncionarioService funcionarioService;
 
