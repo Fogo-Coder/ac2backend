@@ -31,7 +31,4 @@ public class FuncionarioController {
     public FuncionarioDTO buscarFuncionarioPorId(@PathVariable Integer id) {
         return funcionarioService.obterPorId(id);
     }
-
-    
-
 }

@@ -30,5 +30,10 @@ public class ProjetoController {
     public ProjetoDTO buscarProjetoPorId(@PathVariable Integer id) {
         return projetoService.obterPorId(id);
     }   
+    
+    @PostMapping("/{idProjeto}/funcionarios/{idFuncionario}")
+    public void vincularFuncionario(@PathVariable Integer idProjeto, @PathVariable Integer idFuncionario) {
+        projetoService.vincularFuncionario(idProjeto, idFuncionario);
+    }
 
 }

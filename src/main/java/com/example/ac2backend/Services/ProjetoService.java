@@ -5,15 +5,11 @@ import java.util.List;
 import com.example.ac2backend.dtos.ProjetoDTO;
 import com.example.ac2backend.dtos.ProjetoRequestDTO;
 
-
 public interface ProjetoService {
     void salvar(ProjetoRequestDTO projetoRequestDTO);
-
+    void editar(Integer id, ProjetoRequestDTO projetoRequestDTO);
     void remover(Integer id);
-
-    void editar(Integer id, ProjetoRequestDTO dto);
-
     ProjetoDTO obterPorId(Integer id);
-
     List<ProjetoDTO> obterTodos();
+    void vincularFuncionario(Integer idProjeto, Integer idFuncionario);
 }
