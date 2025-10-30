@@ -16,15 +16,16 @@
 </head>
 <body>
 
-    <h1>Envio de Novo Funcionário (FuncionarioRequestDTO)</h1>
+    <h1>Envio de Novo Projeto (ProjetoRequestDTO)</h1>
 
-    <p>Endpoint de Teste (POST): <code id="endpoint-url">/funcionarios</code></p> 
+    <p>Endpoint de Teste (POST): <code id="endpoint-url">/projetos</code></p> 
     
-    <label for="request-body">Corpo da Requisição (JSON para FuncionarioRequestDTO):</label>
+    <label for="request-body">Corpo da Requisição (JSON para ProjetoRequestDTO):</label>
     <textarea id="request-body">{
-"nome": "João da Silva",
-"idSetor": 1, 
-"idsProjetos": [101, 102] 
+"descricao": "Projeto teste frontEnd",
+"dataInicio": "2025-11-01",
+"dataFim": "2025-11-30",
+"idsFuncionarios": [1]
 }</textarea>
 
     <button onclick="sendRequest()">Enviar Dados</button>
@@ -38,7 +39,7 @@
         function sendRequest() {
             // ⚠️ AJUSTE A URL AQUI para a porta e path corretos do seu Spring Boot!
             // Exemplo: 'http://localhost:8081/funcionarios' se a porta for 8081 e o path for /funcionarios
-            const url = 'http://localhost:8081/funcionarios'; 
+            const url = 'http://localhost:8081/projetos'; 
             const requestBody = document.getElementById('request-body').value;
             const responseContainer = document.getElementById('response-container');
 
